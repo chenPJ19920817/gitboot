@@ -6,7 +6,20 @@
 
     <groupId>gitboot</groupId>
     <artifactId>gitboot</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>NioServer</module>
+        <module>NioClient</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId> netty-all</artifactId>
+            <version>4.1.42.Final</version>
+        </dependency>
+    </dependencies>
 
 
 </project>

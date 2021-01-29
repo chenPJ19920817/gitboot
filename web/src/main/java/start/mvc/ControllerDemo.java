@@ -9,6 +9,6 @@ public class ControllerDemo {
 
     @RequestMapping("/print")
     public String print() {
-        return "hello SpringBoot! 陈培捷";
+        return "hello SpringBoot! 陈培捷2222";
     }
 }

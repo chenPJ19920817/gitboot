@@ -12,14 +12,14 @@ public class ControllerDemo {
     @RequestMapping("/print")
     public Object print() {
         return new HashMap<String,Object>(){{
-            put("nu","gcfsm");
+            put("nu","DDFFFF");
         }};
     }
     
     @RequestMapping("/nu")
     public Object nu() {
         return new HashMap<String,Object>(){{
-            put("huu","嘻嘻嘻嘻嘻寻");
+            put("huu","22XXXXXX");
         }};
     }
 }

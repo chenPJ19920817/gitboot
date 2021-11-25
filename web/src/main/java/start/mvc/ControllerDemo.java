@@ -12,7 +12,7 @@ public class ControllerDemo {
     @RequestMapping("/print")
     public Object print() {
         return new HashMap<String,Object>(){{
-            put("nu","hello SpringBoot! 陈培捷2222222223333344444444442");
+            put("nu","20211125");
         }};
     }
 }

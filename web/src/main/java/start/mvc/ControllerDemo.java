@@ -12,7 +12,7 @@ public class ControllerDemo {
     @RequestMapping("/print")
     public Object print() {
         return new HashMap<String,Object>(){{
-            put("nu","消息没组织");
+            put("nu","gcfsm");
         }};
     }
 }

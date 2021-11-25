@@ -15,4 +15,11 @@ public class ControllerDemo {
             put("nu","gcfsm");
         }};
     }
+    
+    @RequestMapping("/nu")
+    public Object nu() {
+        return new HashMap<String,Object>(){{
+            put("huu","嘻嘻嘻嘻嘻寻");
+        }};
+    }
 }

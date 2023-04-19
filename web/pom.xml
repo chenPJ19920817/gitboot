@@ -13,10 +13,45 @@
     <artifactId>web</artifactId>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.16</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.66</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>2.2.6.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -42,42 +77,23 @@
             <plugin>
 
                 <groupId>com.spotify</groupId>
-
                 <artifactId>docker-maven-plugin</artifactId>
-
                 <version>0.4.9</version>
-
                 <configuration>
-
                     <!-- 镜像名称  -->
-
                     <imageName>matosiki/springboot-docker-demo</imageName>
-
                     <!-- docker远程服务器地址 -->
-
-                    <dockerHost>http://47.97.222.81:2375</dockerHost>
-
+                    <dockerHost>http://49.65.126.192:2375</dockerHost>
                     <!-- Dockerfile文件存放目录 -->
-
                     <dockerDirectory>src/main/docker</dockerDirectory>
-
                     <resources>
-
                         <resource>
-
                             <directory>/root</directory>
-
                             <include>app.jar</include>
-
                         </resource>
-
                     </resources>
-
                 </configuration>
-
             </plugin>
-
         </plugins>
     </build>
-
 </project>

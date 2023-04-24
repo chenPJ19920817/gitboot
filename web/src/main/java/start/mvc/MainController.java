@@ -1,5 +1,7 @@
 package start.mvc;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,12 +14,13 @@ import java.util.HashMap;
 @RequestMapping("/main")
 public class MainController {
 
-    @PreAuthorize("hasAuthority('admin')")
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    //@PreAuthorize("hasAuthority('admin')")
     @RequestMapping("/print")
     public Object print() {
-        return new HashMap<String,Object>(){{
-            put("nu","DDFFFF");
-        }};
+       return redisTemplate.keys("*");
     }
 
     @RequestMapping("/loginInfo")

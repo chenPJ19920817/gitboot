@@ -18,13 +18,8 @@ import java.util.HashMap;
 @RequestMapping("/public")
 public class ControllerDemo {
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
-
-    @RequestMapping("/print")
-    public Object print() {
-        return new HashMap<String,Object>(){{
-            put("nu","DDFFFF");
-        }};
+    @RequestMapping("/loginInfo")
+    public Object loginInfo() {
+        return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
 }

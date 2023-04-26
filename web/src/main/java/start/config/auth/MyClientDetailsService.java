@@ -17,6 +17,8 @@ public class MyClientDetailsService implements ClientDetailsService {
     public ClientDetails loadClientByClientId(String clientId) throws ClientRegistrationException {
         //数据库查
         System.out.println(clientId);
+        //校验...
+
         BaseClientDetails clientDetails = new BaseClientDetails(clientId, "oauth2-server", "all", "authorization_code,implicit,client_credentials,refresh_token,password", "aut", "http://www.baidu.com");
         clientDetails.setClientSecret(passwordEncoder.encode("123456"));
         return clientDetails;

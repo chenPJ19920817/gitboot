@@ -21,7 +21,7 @@ public class MainController {
     @RequestMapping("/print")
     public Object print() {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return redisTemplate.keys("*");
+        return principal;
     }
 
     @RequestMapping("/loginInfo")

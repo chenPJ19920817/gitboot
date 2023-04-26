@@ -61,6 +61,5 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 //这个如果配置支持allowFormAuthenticationForClients的，且对/oauth/token请求的参数中有client_id和client-secret的会走ClientCredentialsTokenEndpointFilter来保护
                 //如果没有支持allowFormAuthenticationForClients或者有支持但对/oauth/token请求的参数中没有client_id和client_secret的，走basic认证保护
                 .allowFormAuthenticationForClients();
-
     }
 }

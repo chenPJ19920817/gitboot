@@ -20,7 +20,8 @@ public class MainController {
     //@PreAuthorize("hasAuthority('admin')")
     @RequestMapping("/print")
     public Object print() {
-       return redisTemplate.keys("*");
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return redisTemplate.keys("*");
     }
 
     @RequestMapping("/loginInfo")

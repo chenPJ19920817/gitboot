@@ -26,7 +26,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("用户名不存在！");
         }
         //2、把查询出来的密码（注册时已经加密过）进行解析，或者直接把密码放入构造方法
-        String password = passwordEncoder.encode("123");
+        String password = passwordEncoder.encode("123456");
         return new LoginUser(username, password, Arrays.asList("admin","normal","ROLE_abc"));
     }
 }

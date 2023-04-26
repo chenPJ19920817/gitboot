@@ -38,8 +38,8 @@
       pool-config-ref->引用连接池的配置
      -->
     <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-          p:hostName="127.0.0.1"
-          p:port="6379"
+          p:hostName="49.65.126.192"
+          p:port="6380"
           p:password=""
           p:pool-config-ref="poolConfig"
           p:timeout="100000"/>
